@@ -1,0 +1,329 @@
+.popup {
+    display: none;
+    background-color: white;
+    width: 430px;
+    height: 330px;
+    right: 50%;
+    left: 35%;
+    top: 10%;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+
+.popup__button-close {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    background-image: url(../images/plusboton.png);
+    transform: rotate(45deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: -10%;
+    right: -8%;
+    opacity: 100%;
+}
+
+.popup__button-close:hover {
+    opacity: 60%;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    padding: 8%;
+    gap: 5px;
+    align-items:flex-start;
+}
+
+.popup__tittle {
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+
+.popup__input {
+    width: 358px;
+    height: 27.34px;
+    border: none;
+    font-size: 14px;
+    color: black;
+    padding-top: 5%;
+    box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, .2);
+    background-color: transparent;
+}
+
+.popup__input:invalid {
+    border-bottom: 1px solid #FF0000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
+.popup__button-submit {
+    cursor: pointer;
+    color: #C4C4C4;
+    width: 358px;
+    height: 50.15px;
+    margin-top: 9%;
+    border: 1px solid #C4C4C4;
+    background-color: white;
+}
+
+.popup__button-submit.enabled {
+    background-color: black;
+    cursor: pointer;
+} 
+
+.popup__button-submit.enabled:hover {
+    background-color: black;
+    cursor: pointer;
+    opacity: .5;
+}
+
+
+
+
+/*-------- popup2 --------*/
+
+
+.popup2__input {
+    width: 358px;
+    height: 27.34px;
+    border: none;
+    font-size: 14px;
+    color: black;
+    padding-top: 5%;
+    box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, .2);
+    background-color: transparent;
+}
+
+.popup2__input:invalid {
+    border-bottom: 1px solid #FF0000;
+}
+
+.input-container2 {
+    position: relative;
+}
+
+.error-message2 {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
+.popup2__button-submit {
+    cursor: pointer;
+    color: #C4C4C4;
+    width: 358px;
+    height: 50.15px;
+    margin-top: 9%;
+    border: 1px solid #C4C4C4;
+    background-color: white;
+}
+
+.popup2__button-submit.enabled {
+    background-color: black;
+    cursor: pointer;
+} 
+
+.popup2__button-submit.enabled:hover {
+    background-color: black;
+    cursor: pointer;
+    opacity: .5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 880px) {
+    .popup {
+        display: none;
+        background-color: white;
+        width: 430px;
+        height: 330px;
+        right: 50%;
+        left: 26%;
+        top: 10%;
+        position: absolute;
+        border-radius: 10px;
+        z-index: 1001;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 320px) {
+    .popup {
+        display: none;
+        background-color: white;
+        width: 290px;
+        height: 330px;
+        right: 50%;
+        left: 3%;
+        top: 5.5%;
+        position: absolute;
+        border-radius: 10px;
+        z-index: 1001;
+    }
+
+    .popup__button-close {
+        width: 26px;
+        height: 26px;
+        background-color: black;
+        background-image: url(../images/plusboton.png);
+        transform: rotate(45deg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        top: -10%;
+        right: 1%;
+        opacity: 100%;
+    }
+
+    .popup__input {
+        width: 250px;
+        height: 27.34px;
+        border: none;
+        font-size: 14px;
+        color: black;
+        padding-top: 5%;
+        box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, .2);
+    }
+
+    .popup__button-submit {
+        cursor: pointer;
+        color: #C4C4C4;
+        width: 250px;
+        height: 50.15px;
+        margin-top: 9%;
+        border: 1px solid #C4C4C4;
+        background-color: white;
+    }
+}
+
+
+
+
+
+
+/*----------------------------------- popup2------------------------*/
+
+
+
+
+
+
+
+.popup2 {
+    display: none;
+    background-color: white;
+    width: 430px;
+    height: 330px;
+    right: 50%;
+    left: 35%;
+    top: 10%;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+
+.popup2__button-close {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    background-image: url(../images/plusboton.png);
+    transform: rotate(45deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: -10%;
+    right: -8%;
+    opacity: 100%;
+}
+
+.popup2__button-close:hover {
+    opacity: 60%;
+}
+
+.popup2__form {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    padding: 8%;
+    gap: 5px;
+    align-items:flex-start;
+}
+
+.popup2__tittle {
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+.popup2__input {
+    width: 358px;
+    height: 27.34px;
+    border: none;
+    font-size: 14px;
+    color: black;
+    padding-top: 5%;
+    box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, .2);
+}
+
+.popup2__button-submit {
+    cursor: pointer;
+    color: #C4C4C4;
+    width: 358px;
+    height: 50.15px;
+    margin-top: 9%;
+    border: 1px solid #C4C4C4;
+    background-color: white;
+}
+
+.popup2__button-submit.enabled {
+    background-color: black;
+    cursor: pointer;
+}
+
+.popup2__button-submit.enabled:hover {
+    background-color: black;
+    cursor: pointer;
+    opacity: .5;
+}
