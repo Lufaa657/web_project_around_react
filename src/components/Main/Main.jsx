@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import Card from './components/Card/Card';
 import EditProfile from '../EditProfile';
 import EditAvatar from '../EditAvatar';
 import NewCard from '../NewCard';
-import ImagePopup from '../ImagePopup';  
-import Popup from '../Popup';             
+import ImagePopup from '../ImagePopup';
+import Popup from '../Popup';
+import CurrentUserContext from '../../contexts/CurrentUserContext';
+import './Main.css';
 
 export default function Main({
   cards,
@@ -11,7 +14,10 @@ export default function Main({
   onCardDelete,
   popup,
   onOpenPopup,
-  onClosePopup
+  onClosePopup,
+  onAddPlaceSubmit,
+  selectedCard,
+  onCardClick
 }) {
   const { currentUser } = useContext(CurrentUserContext);
 
@@ -45,37 +51,33 @@ export default function Main({
               card={card}
               onCardLike={onCardLike}
               onCardDelete={onCardDelete}
+              onCardClick={onCardClick}
             />
           ))}
         </ul>
       </section>
 
-      {/* Popups */}
+      {/* Popups con Popup genérico */}
       {popup === 'profile' && (
-        <div className="popup popup_opened">
-          <div className="popup__container">
-            <button className="popup__close" onClick={onClosePopup} />
-            <EditProfile onClose={onClosePopup} />
-          </div>
-        </div>
+        <Popup onClose={onClosePopup}>
+          <EditProfile onClose={onClosePopup} />
+        </Popup>
       )}
 
       {popup === 'avatar' && (
-        <div className="popup popup_opened">
-          <div className="popup__container">
-            <button className="popup__close" onClick={onClosePopup} />
-            <EditAvatar onClose={onClosePopup} />
-          </div>
-        </div>
+        <Popup onClose={onClosePopup}>
+          <EditAvatar onClose={onClosePopup} />
+        </Popup>
       )}
 
       {popup === 'place' && (
-        <div className="popup popup_opened">
-          <div className="popup__container">
-            <button className="popup__close" onClick={onClosePopup} />
-            <NewCard onClose={onClosePopup} />
-          </div>
-        </div>
+        <Popup onClose={onClosePopup}>
+          <NewCard onClose={onClosePopup} onAddPlaceSubmit={onAddPlaceSubmit} />
+        </Popup>
+      )}
+
+      {selectedCard && (
+        <ImagePopup card={selectedCard} onClose={onClosePopup} />
       )}
     </main>
   );
