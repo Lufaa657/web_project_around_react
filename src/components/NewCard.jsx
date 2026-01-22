@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './NewCard.css';
 
-export default function Card({ onClose, onAddPlaceSubmit }) {
+export default function NewCard({ onClose, onAddPlaceSubmit }) {
   const [name, setName] = useState('');
   const [link, setLink] = useState('');
 
