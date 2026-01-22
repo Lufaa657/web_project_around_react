@@ -1,3 +1,4 @@
+// src/components/App.jsx
 import { useEffect, useState } from 'react';
 import Header from './Header/Header';
 import Main from './Main/Main';
@@ -10,6 +11,7 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
   const [popup, setPopup] = useState('');
+  const [selectedCard, setSelectedCard] = useState(null);
 
   useEffect(() => {
     api.getUserInfo().then(setCurrentUser).catch(console.error);
@@ -17,7 +19,12 @@ export default function App() {
   }, []);
 
   const handleOpenPopup = (type) => setPopup(type);
-  const handleClosePopup = () => setPopup('');
+  const handleClosePopup = () => {
+    setPopup('');
+    setSelectedCard(null);
+  };
+
+  const handleCardClick = (card) => setSelectedCard(card);
 
   const handleUpdateUser = async ({ name, about }) => {
     const newData = await api.setUserInfo({ name, about });
@@ -60,6 +67,8 @@ export default function App() {
           onOpenPopup={handleOpenPopup}
           onClosePopup={handleClosePopup}
           onAddPlaceSubmit={handleAddPlaceSubmit}
+          selectedCard={selectedCard}
+          onCardClick={handleCardClick}
         />
         <Footer />
       </div>
