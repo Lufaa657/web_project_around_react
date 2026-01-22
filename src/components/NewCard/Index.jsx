@@ -1,2 +1,2 @@
-import Card from '../Main/components/NewCard/NewCard';
-export default Card;
+import NewCard from '../Main/components/NewCard/NewCard';
+export default NewCard;
